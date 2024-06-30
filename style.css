@@ -79,7 +79,12 @@ h1 {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
+.book img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
 .book h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
