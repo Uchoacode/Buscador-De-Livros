@@ -20,10 +20,12 @@ function searchBooks() {
                 data.items.forEach(item => {
                     const title = item.volumeInfo.title;
                     const authors = item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : 'Unknown';
+                    const thumbnail = item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : '';
 
                     const bookDiv = document.createElement('div');
                     bookDiv.classList.add('book');
                     bookDiv.innerHTML = `
+                        <img src="${thumbnail}" alt="${title}">
                         <h3>${title}</h3>
                         <p>Author(s): ${authors}</p>
                     `;
